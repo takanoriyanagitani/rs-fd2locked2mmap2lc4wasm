@@ -1,0 +1,31 @@
+[package]
+name = "rs-fd2locked2mmap2lc4wasm"
+version = "0.1.0"
+edition = "2024"
+
+exclude = [
+]
+
+[lints.rust]
+unsafe_code = "deny"
+
+[lints.clippy]
+unwrap_used = "forbid"
+expect_used = "forbid"
+panic = "forbid"
+
+[dependencies.wasmtime]
+version = "46"
+default-features = false
+features = [
+  "wat",
+  "runtime",
+  "cranelift",
+]
+
+[dependencies.libc]
+version = "0.2.189"
+default-features = false
+features = [
+  "std",
+]
